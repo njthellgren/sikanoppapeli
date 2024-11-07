@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <span class="player-label">Pelaaja ${i}:</span><br>
             <span class="player-name">${playerName}</span><br>
             <span class="dice-img">${diceImages}</span><br>
-            <button class="roll-button" data-player="${i}" style="display: none;">Roll</button>
+            <button class="roll-button" data-player="${i}" style="display: none;">Heitä</button>
             <span class="rolled-points" id="rolledPoints${i}">Heitetyt: 0</span>
-            <button class="hold-button" data-player="${i}" style="display: none;">Hold</button>
+            <button class="hold-button" data-player="${i}" style="display: none;">Pidä</button>
             <span class="player-score" id="player${i}Score">Pisteet: 0</span><br>`;        
             gameDiv.appendChild(playerDiv);
 
@@ -276,10 +276,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function declareWinner(playerIndex) {
         const playerDiv = document.querySelector(`.player:nth-child(${playerIndex + 1})`);
-        
         const playerName = playerDiv.querySelector('.player-name').textContent;
+    
         gameDiv.innerHTML = `<h2>${playerName} voitti pelin!</h2>`;
-
+        gameDiv.querySelector('h2').style.color = '#a5be60';
+    
         const buttons = document.querySelectorAll('.roll-button, .hold-button');
         buttons.forEach(button => {
             button.style.display = "none";
