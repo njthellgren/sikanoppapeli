@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/dice2.png">
+    <title>Sikanoppapeli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+
+        <form id="playerForm">
+            <div class="player-amount">
+                <h4>Valitse pelaajien määrä, anna nimet ja aseta pistetavoite</h4>
+                <label><input type="radio" name="playerCount" value="2">2</input></label>
+                <label><input type="radio" name="playerCount" value="3">3</input></label>
+                <label><input type="radio" name="playerCount" value="4">4</input></label>
+                <label><input type="radio" name="playerCount" value="5">5</input></label>
+            </div><br>
+            <div id="playerNames"> </div><br>
+            <input type="text" value="" id="goalPoints" class="goal-points" placeholder="Aseta pistetavoite"><br><br>
+
+            <div class="dice-selection">
+                <label><b>Valitse noppien määrä:</b></label><br>
+                <input type="radio" name="diceCount" value="1" checked> 1
+                <input type="radio" name="diceCount" value="2"> 2
+                <br><br>
+            </div>
+
+            <input type="submit" id="playButton" value="Pelaa" style="margin-bottom: 15px;">
+        </form>
+
+        <form id="gameForm">
+            <div id="gameDiv"> </div>
+            <input type="submit" value="Uusi peli" id="newGameButton" class="newGameButton" style="display: none;">
+        </form>
+
+
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

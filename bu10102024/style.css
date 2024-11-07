@@ -1,0 +1,84 @@
+body {
+    background-color: #CCCCCC;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #0A0A0A;
+}
+
+#gameDiv {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px
+}
+
+.displayed-goal-points {
+    position: absolute;
+    margin-top: -50px;
+    text-align: center; 
+    border: 1px solid #0A0A0A;
+}
+
+.player {
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0A0A0A;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.player-label {
+    font-weight: bold;
+    border: 1px solid #0A0A0A;
+}
+
+.player-name {
+    margin-left: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #0A0A0A;
+}
+
+.dice-img img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    transform: rotate(155deg) skewY(8deg);
+}
+
+.roll-button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100px;
+}
+
+.rolled-points {
+    border: 1px solid #0A0A0A;
+}
+
+.hold-button {
+    margin-top: 5px;
+    width: 100px;
+}
+
+.player-score {
+    margin-top: auto;
+    border: 1px solid #0A0A0A;
+}
+
+.score-value {
+    border: 1px solid #0A0A0A;
+}
+
+.newGameButton {
+    display: block;
+    margin: 20px auto;
+    justify-content: center;
+}
